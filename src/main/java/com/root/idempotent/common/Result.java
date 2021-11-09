@@ -7,7 +7,7 @@ import java.io.Serializable;
 /**
  * @author qch
  * @date 2021年11月09日 10:46 上午
- * 自定义返回通用结果类
+ * 自定义返回结果类
  */
 public class Result<T> implements Serializable {
     private static final Long serialVersionUID = 173403404940267848L;

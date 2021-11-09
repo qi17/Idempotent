@@ -10,6 +10,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 /**
  * @author qch
  * @date 2021年11月09日 10:51 上午
+ * 注册/添加 拦截器
  */
 @Configuration
 public class WebConfig implements WebMvcConfigurer {

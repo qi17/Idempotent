@@ -3,6 +3,7 @@ package com.root.idempotent.enums;
 /**
  * @author qch
  * @date 2021年11月09日 1:45 下午
+ * 通用枚举类
  */
 public enum CommonEnum {
 
