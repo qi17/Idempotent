@@ -9,6 +9,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.Random;
+import java.util.UUID;
 
 /**
  * @author qch
@@ -19,12 +21,13 @@ public class TokenServiceImpl implements TokenService {
     @Autowired
     private RedisUtil redisUtil;
 
-    private static final String REDIS_TOKEN_CONSTANT_PREFIX = "id_empotent";
+    private static final String REDIS_TOKEN_CONSTANT_PREFIX = "IDEMPOTENT";
     private static final String REQUEST_TOKEN_NAME_CONSTANT = "x_redis_token";
 
     @Override
     public String createToken() {
-        String str = RandomUtil.randomString("Root", 10);
+        // 生成UUID
+        String str = UUID.randomUUID().toString().replaceAll("-","");
         StringBuilder token = new StringBuilder();
         try {
             // 生成token字符串
