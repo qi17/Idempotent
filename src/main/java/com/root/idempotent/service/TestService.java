@@ -6,5 +6,5 @@ package com.root.idempotent.service;
  */
 public interface TestService {
 
-   String  test();
+    String test();
 }
